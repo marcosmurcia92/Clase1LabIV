@@ -10,18 +10,18 @@
 		<link rel="stylesheet" type="text/css" href="css/animacion.css">
 		<!--final de Estilos-->
 		
-		<script type="text/javascript" src="js/ValidacionjavaScript.js">
+		<script type="text/javascript" src="js/ValidacionJavaScript.js">
 	
         </script>
 </head>
 <body>
 		<?php
 		
-		require_once"partes/barraDeMenu.php";
+		require_once(__DIR__."/partes/barraDeMenu.php");
 
 	 ?>
 <?php     
-	require_once("clases\Alumno.php");
+	require_once(__DIR__."/clases/Alumno.php");
 
 	$titulo = "ALTA";
 	if(isset($_POST['legParaModificar'])) //viene de la grilla

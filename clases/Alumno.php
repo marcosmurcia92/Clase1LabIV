@@ -1,5 +1,5 @@
 <?php
-require_once"accesoDatos.php";
+require_once(__DIR__."/AccesoDatos.php");
 class Alumno
 {
 //--------------------------------------------------------------------------------//
@@ -134,7 +134,7 @@ class Alumno
 	public static function Insertar($Alumno)
 	{
 		$objetoAccesoDato = AccesoDatos::dameUnObjetoAcceso(); 
-				$consulta =$objetoAccesoDato->RetornarConsulta("INSERT into Alumno (nombre,apellido,legajo,foto)values(:nombre,:apellido,:legajo,:foto)");
+				$consulta =$objetoAccesoDato->RetornarConsulta("INSERT into alumno (nombre,apellido,legajo,foto)values(:nombre,:apellido,:legajo,:foto)");
 				$consulta->bindValue(':nombre',$Alumno->nombre, PDO::PARAM_STR);
 				$consulta->bindValue(':apellido', $Alumno->apellido, PDO::PARAM_STR);
 				$consulta->bindValue(':legajo', $Alumno->legajo, PDO::PARAM_INT);
